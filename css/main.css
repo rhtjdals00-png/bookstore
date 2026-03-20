@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+/* common(공통부분) */
+.container {
+            width: 1140px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+/* 헤더 */
+header {
+        width: 100%;
+        height: 160px;
+    }
+
+#header_top {
+             width: 100%;
+             height: 40px;
+             background-color: #eeeeee;
+            }
+
+#header_top .container{
+                       display: flex;
+                       justify-content: flex-end;
+                       align-items: center;
+                       background-color: #eeeeee;
+                    }
+
+#login {
+        width: 270px;
+        height: 20px; 
+        font-size: 13px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+#header_main {
+              width: 1140px;
+              height: 70px;
+              margin: 0 auto;
+            }
+
+nav {
+     width: 100%;
+     height: 50px;
+     border-top: 1px solid #ddd;
+     border-bottom: 1px solid #ddd;
+}
+
+nav .container {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+nav ul {
+        width: 700px;
+        height: 25px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+/* main */
+main {
+    width: 1140px;
+    height: 2200px;
+    background-color: pink;
+    margin: 0 auto;
+    display: flex;
+
+}
+
+aside {
+    width: 300px;
+    height: 100%;
+    background-color: greenyellow;
+}
+
+#main_content {
+    width: calc(100% - 300px);
+    height: 100%;
+    background-color: azure;
+}
+
+#slider {
+    width: 100%;
+    height: 390px;
+    background-color: green;
+}
+
+#slider_txt {
+    width: 270px;
+    height: 100%;
+    background-color: blue;
+}
+
+/* swiper css */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img {display: block; width: 100%; height: 100%; object-fit: cover;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    height: 180px;
+    border-top: 1px solid #ddd;
+}

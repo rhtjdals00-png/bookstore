@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단기 북스</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header>
+        <div id="header_top">
+            <div class="container">
+                <div id="login">
+                    <a href="#">로그인</a>
+                    <a> | </a>
+                    <a href="#">회원가입</a>
+                    <a> | </a>
+                    <a href="#">장바구니</a>
+                    <a> | </a>
+                    <a href="#">고객센터</a>
+                    <a> | </a>
+                    <a href="#">내 강의실</a>
+                </div>
+            </div>
+        </div>
+        <div id="header_main">
+            <a href="#"><img src="/project1/img/header_logo_dangibooks.png" alt="logo" width="130px;"></a>
+        </div>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a href="#">공단기 홈</a></li>
+                    <li><a href="#">선생님</a></li>
+                    <li><a href="#">수강신청</a></li>
+                    <li><a href="#">수험정보</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">교재</a></li>
+                    <li><a href="#">풀서비스</a></li>
+                    <li><a href="#">프리패스</a></li>
+                    <li><a href="#">프리미엄 서비스</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <aside></aside>
+        <div id="main_content">
+            <div id="slider">
+                <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide">slide1</div>
+                <div class="swiper-slide">slide2</div>
+                <div class="swiper-slide">slide3</div>
+                <div class="swiper-slide">slide4</div>
+                <div class="swiper-slide">slide5</div>
+                <div class="swiper-slide">slide6</div>
+                <div class="swiper-slide">slide7</div>
+                <div class="swiper-slide">slide8</div>
+                <div class="swiper-slide">slide9</div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div id="search"></div>
+            <div id="best"></div>
+            <div id="banner"></div>
+            <div id="new"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <a>회사소개</a>
+            <a>|</a>
+            <a>이용약관</a>
+            <a>|</a>
+            <a>개인정보처리방침</a>
+            <a>|</a>
+            <a>강사모집</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js">
+    </script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+    </script>
+
+</body>
+</html>
