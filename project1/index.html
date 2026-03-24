@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단기 북스</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header>
+        <div id="header_top">
+            <div class="container">
+                <div id="login">
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">장바구니</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">내 강의실</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="header_main">
+            <a href="#"><img src="./img/header_logo_dangibooks.png" alt="logo" width="130px;"></a>
+            <!-- https://un-static.conects.com/un_static/img/common/logo/header_logo_dangibooks.png -->
+
+            <select name="main_option" id="main_option">
+                <option value="#">공단기</option>
+                <option value="#">기술단기</option>
+                <option value="#">소방단기</option>
+                <option value="#">공기업단기</option>
+                <option value="#">자단기</option>
+                <option value="#">영단기</option>
+                <option value="#">노무사단기</option>
+                <option value="#">법무사단기</option>
+            </select>
+        </div>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a href="#">공단기 홈</a></li>
+                    <li><a href="#">선생님</a></li>
+                    <li><a href="#">수강신청</a></li>
+                    <li><a href="#">수험정보</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">교재</a></li>
+                    <li><a href="#">풀서비스</a></li>
+                    <li><a href="#">프리패스</a></li>
+                    <li><a href="#">프리미엄 서비스</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <aside class="aside">
+            <div class="aside_dangi">
+                <h3>단기북스</h3>
+            </div>
+
+            <nav class="aside_menu">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li><a href="#">전체 교재</a></li>
+                    <li><a href="#">베스트셀러</a></li>
+                    <li><a href="#">이벤트</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div id="main_content">
+            <div id="slider">
+                <div id="slider_txt">
+                    <h2>공단기 Pick!<br>추천 교재</h2>
+                    <p>단기북스 MD가 <br>자신있게 추천하는 오늘의 책</p>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">slide1</div>
+                        <div class="swiper-slide">slide2</div>
+                        <div class="swiper-slide">slide3</div>
+                        <div class="swiper-slide">slide4</div>
+                        <div class="swiper-slide">slide5</div>
+                        <div class="swiper-slide">slide6</div>
+                        <div class="swiper-slide">slide7</div>
+                        <div class="swiper-slide">slide8</div>
+                        <div class="swiper-slide">slide9</div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div id="search">
+                <div class="search_box">
+                    <h3>교재 검색</h3>
+
+                    <select>
+                        <option>교재명</option>
+                        <option>저자명</option>
+                        <option>출판사명</option>
+                        <option>ISBN</option>
+                    </select>
+
+                    <div class="search_input">
+                        <input type="text" placeholder="저자명/교재명 검색">
+                        <button>
+                            <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" width="16">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="best">
+                <h3><a href="#">공단기 베스트셀러 ></a></h3><br><br>
+                <div class="best_list"></div>
+            </div>
+
+            <div id="banner">
+                <img src="./img/banner.png" alt="배너">
+            </div>
+
+            <div id="new">new</div>
+        </div>
+        <div class="side_banner">
+            <strong>최근 본 상품</strong>
+            <ul id="view-book">
+                <li><a href="javascript:void(0)" class="no_data"></a></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="link_box">
+                <ul class="footer_menu">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#" class="active">개인정보처리방침</a></li>
+                    <li><a href="#">강사모집</a></li>
+                </ul>
+                <div class="footer_family">
+                    <select name="select_box" id="select_box">
+                        <option value="#">패밀리사이트</option>
+                        <option value="#">공단기</option>
+                        <option value="#">기술단기</option>
+                        <option value="#">소방단기</option>
+                        <option value="#">경단기</option>
+                        <option value="#">공기업단기</option>
+                        <option value="#">자단기</option>
+                        <option value="#">영단기</option>
+                        <option value="#">MD단기</option>
+                        <option value="#">노무사단기</option>
+                        <option value="#">법무사단기</option>
+                        <option value="#">공단기 노량진학원</option>
+                        <option value="#">경단기 노량진학원</option>
+                        <option value="#">소방단기 노량진학원</option>
+                        <option value="#">법원직 노량진학원</option>
+                        <option value="#">노량진 공무원 독학관</option>
+                    </select>
+                </div>
+            </div>
+            <div class="footer_conts">
+                <p>(주)에스티유니타스</p>
+                <ul>
+                    <li>전화번호 : 1670-1419</li>
+                    <li>이메일주소 : STunitas_cs@stunitas.com</li>
+                    <li>주소 : 서울특별시 구로구 경인로 662, 15층</li>
+                </ul>
+                <ul>
+                    <li>대표이사 : 김형국</li>
+                    <li>에스티아카데미평생교육원(제1021호)</li>
+                    <li>사업자 등록번호 : 119-86-27573</li>
+                    <li>통신판매업신고 : 2022-서울구로-2373</li>
+                    <li>호스팅제공자 : © 2022,Amazon Web Services, Inc</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js">
+    </script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
+    <script src="./js/book.js"></script>
+    <script src="./js/swiper.js"></script>
+
+</body>
+
+</html>
