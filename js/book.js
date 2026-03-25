@@ -32,11 +32,33 @@ async function bookData() {
 
             // 요소 생성 및 추가
             box.innerHTML = `<img src="${data.documents[i].thumbnail}">
+                <div>
                     <h3>${data.documents[i].title}</h3>
                     <h6>${data.documents[i].authors}</h6>
                     <p>${data.documents[i].contents.substring(0, 60)}</p>
-                    <button>click</button>
+                </div>
                     `
+        });
+                // #slider swiper
+        var slider_swiper = new Swiper(".sliderSwiper", {
+            rewind: true,
+            navigation: {
+                nextEl: "#slider .swiper-button-next",
+                prevEl: "#slider .swiper-button-prev",
+            },
+            pagination: {
+                el: "#slider .swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    // 데이터가 있을 때만 이미지를 넣도록 예외 처리
+                    const imgUrl = data.documents[index] ? data.documents[index].thumbnail : '';
+                    return `<img class="${className}" src="${imgUrl}" style="width:40px; height:auto;">`;
+                },
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
         });
 
     } catch (error) {
@@ -45,3 +67,50 @@ async function bookData() {
 }
 
 bookData();
+
+
+// best셀러
+
+async function bestBookData() {
+    const params = new URLSearchParams({
+        query: "공무원",
+        size: 10
+    });
+
+    try {
+        const response = await fetch(`https://dapi.kakao.com/v3/search/book?${params}`, {
+            headers: {
+                Authorization: "KakaoAK 5a066b71dc2aefc83244287f864c2a9e"
+            }
+        });
+
+        const data = await response.json();
+
+        renderBestBooks(data.documents);
+
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+bestBookData();
+
+function renderBestBooks(books) {
+    const container = document.querySelector(".best_list");
+
+    container.innerHTML = "";
+
+    books.forEach((book, i) => {
+        const item = `
+            <div class="best_item">
+                <img src="${book.thumbnail}" alt="">
+                <span class="rank">${i + 1}</span>
+                <p class="title">${book.title}</p>
+                <p class="author">${book.authors}</p>
+                <p class="price">${book.price}원</p>
+            </div>
+        `;
+
+        container.innerHTML += item;
+    });
+}

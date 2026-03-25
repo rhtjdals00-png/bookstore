@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -44,15 +44,15 @@
         <nav>
             <div class="container">
                 <ul>
-                    <li><a href="#">공단기 홈</a></li>
-                    <li><a href="#">선생님</a></li>
-                    <li><a href="#">수강신청</a></li>
-                    <li><a href="#">수험정보</a></li>
-                    <li><a href="#">이벤트</a></li>
-                    <li><a href="#">교재</a></li>
-                    <li><a href="#">풀서비스</a></li>
-                    <li><a href="#">프리패스</a></li>
-                    <li><a href="#">프리미엄 서비스</a></li>
+                    <li><a href="#"><strong>공단기 홈</strong></a></li>
+                    <li><a href="#"><strong>선생님</strong></a></li>
+                    <li><a href="#"><strong>수강신청</strong></a></li>
+                    <li><a href="#"><strong>수험정보</strong></a></li>
+                    <li><a href="#"><strong>이벤트</strong></a></li>
+                    <li><a href="#"><strong>교재</strong></a></li>
+                    <li><a href="#"><strong>풀서비스</strong></a></li>
+                    <li><a href="#"><strong>프리패스</strong></a></li>
+                    <li><a href="#"><strong>프리미엄 서비스</strong></a></li>
                 </ul>
             </div>
         </nav>
@@ -66,45 +66,75 @@
 
             <nav class="aside_menu">
                 <ul>
-                    <li><a href="#">홈</a></li>
-                    <li><a href="#">전체 교재</a></li>
-                    <li><a href="#">베스트셀러</a></li>
-                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#"><strong>홈</strong></a></li>
+                    <li><a href="#"><strong>전체 교재</strong></a></li>
+                    <li><a href="#"><strong>베스트셀러</strong></a></li>
+                    <li><a href="#">주간</a></li>
+                    <li><a href="#">월간</a></li>
+                    <li><a href="#"><strong>이벤트</strong></a></li>
                 </ul>
             </nav>
         </aside>
         <div id="main_content">
             <div id="slider">
                 <div id="slider_txt">
-                    <h2>공단기 Pick!<br>추천 교재</h2>
-                    <p>단기북스 MD가 <br>자신있게 추천하는 오늘의 책</p>
+                    <h2>공단기 <span style="color:blue">Pick!</span><br>추천 교재</h2><br>
+                    <p><span style="color:gray"><span style="font-size: 13px;">단기북스 MD가 <br>자신있게 추천하는 오늘의 책</span></span></p>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
-                <div class="swiper mySwiper">
+                <div class="swiper sliderSwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">slide1</div>
-                        <div class="swiper-slide">slide2</div>
-                        <div class="swiper-slide">slide3</div>
-                        <div class="swiper-slide">slide4</div>
-                        <div class="swiper-slide">slide5</div>
-                        <div class="swiper-slide">slide6</div>
-                        <div class="swiper-slide">slide7</div>
-                        <div class="swiper-slide">slide8</div>
-                        <div class="swiper-slide">slide9</div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
-            <div id="search">search</div>
-            <div id="best">best</div>
-            <div id="banner">banner</div>
-            <div id="new">new</div>
+            <div id="search">
+                <div class="search_box">
+                    <h3>교재 검색</h3>
+
+                    <select>
+                        <option>교재명</option>
+                        <option>저자명</option>
+                        <option>출판사명</option>
+                        <option>ISBN</option>
+                    </select>
+
+                    <div class="search_input">
+                        <input type="text" placeholder="저자명/교재명 검색">
+                        <button>
+                            <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" width="16">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="best">
+                <h3><a href="#">공단기 베스트셀러 ></a></h3><br><br>
+                <div class="best_list"></div>
+            </div>
+
+            <div id="banner">
+                <img src="./img/banner.png" alt="배너">
+            </div>
+
+            <div id="new">
+                <h3>새로나온교재</h3>
+                <div class="newbook"></div>
+            </div>
         </div>
         <div class="side_banner">
             <strong>최근 본 상품</strong>
             <ul id="view-book">
-                <li><a href="javascript:void(0)" class="no_data"></a></li>
+                <li><a href="#" class="no_data"></a></li>
             </ul>
         </div>
     </main>
