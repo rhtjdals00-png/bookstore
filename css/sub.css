@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+.contents {
+    margin: auto;
+    width: 1140px;
+    height: 2320px;
+}
+
+.product_location ul {
+    display: flex;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.product_location ul li::after {
+    content: ">";
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+.product_location ul li:last-child::after {
+    content: "";
+}
+
+.product_detail {
+    margin-top: 10px;
+    background-color: rgb(134, 151, 94);
+}
+
+/* --------------------------- 우측하단 공유/상단올리기 ----------------------- */
+
+.sub_side_banner {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.sub_side_banner div {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: 1px solid black;
+    margin-top: 10px;
+
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+}
+/* ---------------------------------- 책정보 ---------------------------------- */
+.product_detail {
+    display: flex;
+    gap: 40px;
+}
+
+.product_left img {
+    width: 300px;
+}
+
+.product_right {
+    flex: 1;
+}
+
+.price_box {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.discount {
+    color: blue;
+    margin-right: 8px;
+}
+
+.sale_price {
+    margin-right: 8px;
+}
+
+.origin_price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 16px;
+}

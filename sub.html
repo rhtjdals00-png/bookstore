@@ -8,11 +8,12 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/sub.css">
 </head>
 
 <body>
+    <!-- ---------------------------------- 헤더 ----------------------------- -->
     <header>
         <div id="header_top">
             <div class="container">
@@ -29,7 +30,6 @@
         </div>
         <div id="header_main">
             <a href="#"><img src="./img/header_logo_dangibooks.png" alt="logo" width="130"></a>
-            <!-- https://un-static.conects.com/un_static/img/common/logo/header_logo_dangibooks.png -->
 
             <select name="main_option" id="main_option">
                 <option value="#">공단기</option>
@@ -58,105 +58,52 @@
             </div>
         </nav>
     </header>
-
-    <main>
-        <aside class="aside">
-            <div class="aside_dangi">
-                <h3>단기북스</h3>
+    <!-- ----------------------------- 콘텐츠 ----------------------------- -->
+    <div class="contents">
+        <div class="sub_side_banner">
+            <div class="share">
+                <i class="ico_share">공유</i>
             </div>
-
-            <nav class="aside_menu">
-                <ul>
-                    <li><a href="#"><strong>홈</strong></a></li>
-                    <li><a href="#"><strong>전체 교재</strong></a></li>
-                    <li><a href="#"><strong>베스트셀러</strong></a></li>
-                    <li><a href="#">주간</a></li>
-                    <li><a href="#">월간</a></li>
-                    <li><a href="#"><strong>이벤트</strong></a></li>
-                </ul>
-            </nav>
-        </aside>
-        <div id="main_content">
-            <div id="slider">
-                <div id="slider_txt">
-                    <h2>공단기 <span style="color:blue">Pick!</span><br>추천 교재</h2><br>
-                    <p><span style="color:gray"><span style="font-size: 13px;">단기북스 MD가 <br>자신있게 추천하는 오늘의
-                                책</span></span></p>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
-                <div class="swiper sliderSwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-            <div id="search">
-                <div class="search_box">
-                    <h3>교재 검색</h3>
-                    <select>
-                        <option>교재명</option>
-                        <option>저자명</option>
-                        <option>출판사명</option>
-                        <option>ISBN</option>
-                    </select>
-                    <div class="search_input">
-                        <input type="text" placeholder="저자명/교재명 검색">
-                        <button>
-                            <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" width="16" alt="search">
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div id="best">
-                <div class="best_header">
-                    <h3><a href="#">공단기 베스트셀러 ></a></h3>
-
-                    <div class="best_tabs">
-                        <button class="best_tab active" data-type="week">주간</button>
-                        <button class="best_tab" data-type="month">월간</button>
-                    </div>
-                </div>
-
-                <div class="best_list"></div>
-            </div>
-
-            <div id="banner">
-                <img src="./img/banner.png" alt="배너">
-            </div>
-
-            <div id="new">
-                <div class="new_header">
-                    <h3>새로나온 교재</h3>
-                    <div class="new_nav">
-                        <span class="new_pagination"></span>
-                        <div class="new_prev">&lt;</div>
-                        <div class="new_next">&gt;</div>
-                    </div>
-                </div>
-
-                <div class="swiper newSwiper">
-                    <div class="swiper-wrapper newbook"></div>
-                </div>
+            <div class="arrow_up">
+                <i class="ico_arrow_up">↑</i>
             </div>
         </div>
-        <div class="side_banner">
-            <strong>최근 본 상품</strong>
-            <ul id="view-book">
-                <li><a href="#" class="no_data"></a></li>
-            </ul>
-        </div>
-    </main>
 
+        <div class="inner">
+            <section class="sub_contents">
+                <section class="product_location">
+                    <ul>
+                        <li><a href="./index.html">공단기</a></li>
+                        <li><a href="./index.html"">단기북스</a></li>
+                        <li><a href=" ./index.html"">영어</a></li>
+                    </ul>
+                </section>
+
+                <section class="product_detail">
+                    <div class="product_left">
+                        <img id="bookImg" src="" alt="책 이미지">
+                    </div>
+                    <div class="product_right">
+                        <h2 id="bookTitle"></h2>
+                        <p>저자: <span id="bookAuthor"></span></p>
+                        <p>출판사: <span id="bookPublisher"></span></p>
+                        <div class="price_box">
+                            <span class="discount" id="discountPercent"></span>
+                            <span class="sale_price" id="bookSalePrice"></span>원
+                            <span class="origin_price" id="bookPrice"></span>원
+                        </div>
+                        <p>배송비: 3,000원</p>
+                        <p>등록일: 2026년 02월 09일</p>
+                    </div>
+                </section>
+            </section>
+            <section class="sub_contents">
+
+            </section>
+        </div>
+    </div>
+
+    <!-- ----------------------------푸터---------------------------------- -->
     <footer>
         <div class="container">
             <div class="link_box">
@@ -199,13 +146,13 @@
                     <li>에스티아카데미평생교육원(제1021호)</li>
                     <li>사업자 등록번호 : 119-86-27573</li>
                     <li>통신판매업신고 : 2022-서울구로-2373</li>
-                    <li>호스팅제공자 : © 2022,Amazon Web Services, Inc</li>
+                    <li>호스팅제공자 : ©2022,Amazon Web Services, Inc</li>
                 </ul>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js">
     </script>
     <script>
         var swiper = new Swiper(".mySwiper", {
@@ -218,8 +165,9 @@
             },
         });
     </script>
+    <script src="./js/swiper.js"></script> -->
+
     <script src="./js/book.js"></script>
-    <script src="./js/swiper.js"></script>
 
 </body>
 
