@@ -22,17 +22,13 @@
     content: "";
 }
 
-.product_detail {
-    margin-top: 10px;
-    background-color: rgb(134, 151, 94);
-}
-
 /* --------------------------- 우측하단 공유/상단올리기 ----------------------- */
 
 .sub_side_banner {
     position: fixed;
     right: 20px;
     bottom: 20px;
+    z-index: 500;
 }
 
 .sub_side_banner div {
@@ -41,23 +37,60 @@
     background: white;
     border: 1px solid black;
     margin-top: 10px;
-
     text-align: center;
     line-height: 50px;
     cursor: pointer;
 }
+
 /* ---------------------------------- 책정보 ---------------------------------- */
+
 .product_detail {
     display: flex;
     gap: 40px;
+    margin-top: 10px;
 }
 
-.product_left img {
+.product_left {
+    width: 360px;
+}
+
+.product_img {
+    width: 100%;
+    height: 480px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product_img img {
     width: 300px;
+    height: auto;
+    display: block;
+}
+
+.product_btn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.product_btn button {
+    width: 120px;
+    height: 40px;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
 
 .product_right {
     flex: 1;
+    padding-top: 10px;
 }
 
 .price_box {
@@ -79,4 +112,112 @@
     color: #999;
     text-decoration: line-through;
     font-size: 16px;
+}
+
+.product_right p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* -------------------------------- 서브콘텐츠 --------------------- */
+.sub_contents_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+/* ----------------------------- 탭 ---------------------------- */
+
+.tab_menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;}
+
+.tab_menu li {
+    width: 200px;
+    line-height: 50px;
+    border: 1px solid #aaa;
+    text-align: center;
+    border-bottom: 0;}
+
+.active {
+    background-color: #eee;
+    border-bottom: 1px solid #eee;}
+
+.tabcontent.active_content {
+    display: block;
+}
+
+.tabcontent {
+    width: 100%;
+    min-height: 300px;
+    background-color: #eee;
+    border-top: 1px solid #aaa;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+}
+
+.tabcontent button {
+    display: block;
+    width: 95%;
+    height: 40px;
+    margin: 20px auto 0;
+}
+
+/* ----------------------------어사이드----------------------- */
+
+.sub_contents_aside {
+    width: 250px;
+}
+
+.aside_box {
+    position: sticky;
+    top: 120px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background: #fff;
+}
+
+.aside_box h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.aside_price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.quantity button {
+    width: 30px;
+    height: 30px;
+}
+
+.quantity input {
+    width: 50px;
+    text-align: center;
+}
+
+.btn_cart {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    background: #fff;
+    cursor: pointer;
+}
+
+.btn_buy {
+    width: 100%;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }

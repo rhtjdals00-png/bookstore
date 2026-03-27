@@ -242,11 +242,13 @@ async function getBookDetail() {
         document.getElementById("bookAuthor").textContent = book.authors.join(", ");
         document.getElementById("bookPublisher").textContent = book.publisher;
         document.getElementById("bookSalePrice").textContent = book.sale_price.toLocaleString();
-        document.getElementById("bookPrice").textContent = book.price.toLocaleString();
+        document.getElementById("bookPrice").textContent = book.price.toLocaleString() + "원";
 
         const discount = Math.round(((book.price - book.sale_price) / book.price) * 100);
         document.getElementById("discountPercent").textContent = discount + "%";
 
+        document.getElementById("asideTitle").textContent = book.title;
+        document.getElementById("asideSalePrice").textContent = book.sale_price.toLocaleString();
     } catch (error) {
         console.log("에러 발생:", error);
     }

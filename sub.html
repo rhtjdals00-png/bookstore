@@ -75,30 +75,82 @@
                     <ul>
                         <li><a href="./index.html">공단기</a></li>
                         <li><a href="./index.html"">단기북스</a></li>
-                        <li><a href=" ./index.html"">영어</a></li>
+                        <li><a href="./index.html"">영어</a></li>
                     </ul>
                 </section>
 
                 <section class="product_detail">
                     <div class="product_left">
-                        <img id="bookImg" src="" alt="책 이미지">
+                        <div class="product_img">
+                            <img id="bookImg" src="" alt="책 이미지">
+                        </div>
+
+                        <div class="product_btn">
+                            <button type="button">크게보기</button>
+                            <button type="button">미리보기</button>
+                        </div>
                     </div>
+
                     <div class="product_right">
                         <h2 id="bookTitle"></h2>
-                        <p>저자: <span id="bookAuthor"></span></p>
-                        <p>출판사: <span id="bookPublisher"></span></p>
                         <div class="price_box">
                             <span class="discount" id="discountPercent"></span>
                             <span class="sale_price" id="bookSalePrice"></span>원
-                            <span class="origin_price" id="bookPrice"></span>원
+                            <span class="origin_price" id="bookPrice"></span>
                         </div>
-                        <p>배송비: 3,000원</p>
-                        <p>등록일: 2026년 02월 09일</p>
+                        <table>
+                            <tr>
+                                <th>배송비</th>
+                                <td>3,000원</td>
+                            </tr>
+                            <tr>
+                                <th>저자&nbsp;&nbsp;&nbsp;</th>
+                                <td><span id="bookAuthor"></span></td>
+                            </tr>
+                            <tr>
+                                <th>출판사</th>
+                                <td><span id="bookPublisher"></span></td>
+                            </tr>
+                            <tr>
+                                <th>등록일</th>
+                                <td>2026년 02월 09일</td>
+                            </tr>
+                        </table>
+                        <br>
+                        <hr>
                     </div>
                 </section>
             </section>
             <section class="sub_contents">
+                <div class="sub_contents_main">
+                    <div class="sub_contents_txt">
+                        <ul class="tab_menu">
+                            <li class="active">tab1</li>
+                            <li>tab2</li>
+                        </ul>
 
+                        <div class="tabcontent">
+                            내용1
+                            <button>펼치기</button>
+                        </div>
+                        <div class="tabcontent">
+                            내용2
+                            <button>펼치기</button>
+                        </div>
+                    </div>
+                    <aside class="sub_contents_aside">
+                        <div class="aside_box">
+                            <h3 id="asideTitle"></h3>
+
+                            <p class="aside_price">
+                                <span id="asideSalePrice"></span>원
+                            </p>
+
+                            <button class="btn_cart">장바구니</button>
+                            <button class="btn_buy">바로 구매하기</button>
+                        </div>
+                    </aside>
+                </div>
             </section>
         </div>
     </div>
@@ -168,6 +220,7 @@
     <script src="./js/swiper.js"></script> -->
 
     <script src="./js/book.js"></script>
+    <script src="./js/sub.js"></script>
 
 </body>
 
