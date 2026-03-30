@@ -75,7 +75,7 @@
                     <ul>
                         <li><a href="./index.html">공단기</a></li>
                         <li><a href="./index.html"">단기북스</a></li>
-                        <li><a href="./index.html"">영어</a></li>
+                        <li><a href=" ./index.html"">영어</a></li>
                     </ul>
                 </section>
 
@@ -121,22 +121,38 @@
                     </div>
                 </section>
             </section>
+            <!-- -----------------------탭-------------------------- -->
             <section class="sub_contents">
                 <div class="sub_contents_main">
                     <div class="sub_contents_txt">
                         <ul class="tab_menu">
-                            <li class="active">tab1</li>
-                            <li>tab2</li>
+                            <li><a href="#section_info" class="active">상품정보</a></li>
+                            <li><a href="#section_review">교재 후기</a></li>
+                            <li><a href="#section_cut">분철 안내</a></li>
+                            <li><a href="#section_delivery">배송/교환/반품</a></li>
                         </ul>
 
-                        <div class="tabcontent">
-                            내용1
-                            <button>펼치기</button>
-                        </div>
-                        <div class="tabcontent">
-                            내용2
-                            <button>펼치기</button>
-                        </div>
+                        <section id="section_info" class="detail_section">
+                            <h3>상품정보</h3>
+                            <div class="detail_box collapsed"><img src="./img/book_introduce.jpg" alt="book_introduce">
+                            </div>
+                            <button type="button" class="toggle_btn">펼치기</button>
+                        </section>
+
+                        <section id="section_review" class="detail_section">
+                            <h3>교재 후기</h3>
+                            <div class="section_inner" id="reviewBox"></div>
+                        </section>
+
+                        <section id="section_cut" class="detail_section">
+                            <h3>분철 안내</h3>
+                            <div class="section_inner" id="cutBox"></div>
+                        </section>
+
+                        <section id="section_delivery" class="detail_section">
+                            <h3>배송/교환/반품</h3>
+                            <div class="section_inner" id="deliveryBox"></div>
+                        </section>
                     </div>
                     <aside class="sub_contents_aside">
                         <div class="aside_box">

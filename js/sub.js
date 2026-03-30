@@ -1,61 +1,96 @@
-// -------------------------- 탭메뉴 ----------------------
+// -------------------------- 텍스트 파일 불러오기 --------------------------
 
-// 탭메뉴
-const tabMenu = document.querySelectorAll('.tab_menu li');
-const tabContent = document.querySelectorAll('.tabcontent');
-const btns = document.querySelectorAll('.tabcontent button');
+async function loadTextFile(filePath, elementId) {
+  try {
+    const response = await fetch(filePath);
 
-// 처음에는 첫 번째 탭만 보이기
-tabContent.forEach((tc, i) => {
-  if (i === 0) {
-    tc.style.display = 'block';
-    tc.style.minHeight = '300px';
-    tc.classList.add('active_content');
-  } else {
-    tc.style.display = 'none';
-    tc.classList.remove('active_content');
+    if (!response.ok) {
+      throw new Error('파일을 불러오지 못했습니다.');
+    }
+
+    const text = await response.text();
+    const target = document.getElementById(elementId);
+
+    if (target) {
+      target.innerText = text;
+    }
+  } catch (error) {
+    console.log(elementId + ' 불러오기 실패:', error);
   }
-});
+}
 
-// 탭메뉴 클릭
-tabMenu.forEach((tm, i) => {
-  tm.addEventListener('click', () => {
-    // 탭 active 제거
-    tabMenu.forEach(item => item.classList.remove('active'));
-    tm.classList.add('active');
+// loadTextFile('./text/info.txt', 'infoBox');
+loadTextFile('./text/review.txt', 'reviewBox');
+loadTextFile('./text/cut.txt', 'cutBox');
+loadTextFile('./text/delivery.txt', 'deliveryBox');
 
-    // 내용 보이기 / 숨기기
-    tabContent.forEach((tc, j) => {
-      if (i === j) {
-        tc.style.display = 'block';
-        tc.style.minHeight = '300px';
-        tc.classList.add('active_content');
 
-        const btn = tc.querySelector('button');
-        if (btn) btn.innerText = '펼치기';
-      } else {
-        tc.style.display = 'none';
-        tc.style.minHeight = '300px';
-        tc.classList.remove('active_content');
+// -------------------------- 탭 메뉴 --------------------------
 
-        const btn = tc.querySelector('button');
-        if (btn) btn.innerText = '펼치기';
-      }
+const tabLinks = document.querySelectorAll('.tab_menu a');
+const sections = document.querySelectorAll('.detail_section');
+
+tabLinks.forEach(function (link) {
+  link.addEventListener('click', function () {
+    tabLinks.forEach(function (item) {
+      item.classList.remove('active');
     });
+
+    this.classList.add('active');
   });
 });
 
-// 더보기 클릭
-btns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const parent = btn.closest('.tabcontent');
+window.addEventListener('scroll', function () {
+  let current = '';
 
-    if (btn.textContent === '펼치기') {
-      parent.style.minHeight = '500px';
-      btn.innerText = '접기';
-    } else {
-      parent.style.minHeight = '300px';
-      btn.innerText = '펼치기';
+  sections.forEach(function (section) {
+    const sectionTop = section.offsetTop - 120;
+    const sectionHeight = section.offsetHeight;
+
+    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  tabLinks.forEach(function (link) {
+    link.classList.remove('active');
+
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
     }
   });
 });
+
+
+// -------------------------- 펼치기 / 접기 --------------------------
+
+const toggleBtn = document.querySelector('.toggle_btn');
+const detailBox = document.querySelector('.detail_box');
+
+if (toggleBtn && detailBox) {
+  toggleBtn.addEventListener('click', function () {
+    if (detailBox.classList.contains('collapsed')) {
+      detailBox.classList.remove('collapsed');
+      detailBox.classList.add('expanded');
+      this.innerText = '접기';
+    } else {
+      detailBox.classList.remove('expanded');
+      detailBox.classList.add('collapsed');
+      this.innerText = '펼치기';
+    }
+  });
+}
+
+
+// -------------------------- 위로 가기 --------------------------
+
+const arrowUp = document.querySelector('.arrow_up');
+
+if (arrowUp) {
+  arrowUp.addEventListener('click', function () {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
